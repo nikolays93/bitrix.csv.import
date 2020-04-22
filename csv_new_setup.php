@@ -1,5 +1,5 @@
 <?
-//<title>CSV (new)</title>
+//<title>CSV updated (SEO18)</title>
 use Bitrix\Main,
 	Bitrix\Catalog;
 
