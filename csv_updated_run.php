@@ -32,6 +32,9 @@ use Bitrix\Main,
 	Bitrix\Catalog,
 	Bitrix\Iblock;
 
+$USE_TRANSLIT = "Y";
+$TRANSLIT_LANG = "ru";
+
 IncludeModuleLangFile($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/catalog/import_setup_templ.php');
 $startImportExecTime = getmicrotime();
 
@@ -442,9 +445,9 @@ if ('' == $strImportErrorMessage)
 			$bUpdatePrice = 'N';
 		}
 
-		$boolTranslitElement = true;
+		$boolTranslitElement = false;
 
-		$boolTranslitSection = true;
+		$boolTranslitSection = false;
 		$arTranslitElement = array();
 		$arTranslitSection = array();
 		if ('Y' == $USE_TRANSLIT)
