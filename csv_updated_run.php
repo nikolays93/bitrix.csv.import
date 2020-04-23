@@ -706,10 +706,8 @@ if ('' == $strImportErrorMessage)
 								$arGroupsTmp[$i]['CODE'] = esc_cyr($arGroupsTmp[$i]['CODE'] ?: $arGroupsTmp[$i]["NAME"]);
 							}
 						}
-
 						$LAST_GROUP_CODE = $arr["ID"];
 						$res = $bs->Update($LAST_GROUP_CODE, $arGroupsTmp[$i], true, true, 'Y' === $IMAGE_RESIZE);
-
 						if (!$res)
 						{
 							$strErrorR .= GetMessage("CATI_LINE_NO")." ".$line_num.". ".GetMessage("CATI_ERR_UPDATE_SECT")." ".$bs->LAST_ERROR."<br>";
@@ -725,7 +723,6 @@ if ('' == $strImportErrorMessage)
 								$arGroupsTmp[$i]['CODE'] = esc_cyr($arGroupsTmp[$i]['CODE'] ?: $arGroupsTmp[$i]["NAME"]);
 							}
 						}
-
 						$arGroupsTmp[$i]["IBLOCK_ID"] = $IBLOCK_ID;
 						$arGroupsTmp[$i]["ACTIVE"] = (isset($arGroupsTmp[$i]["ACTIVE"]) && 'N' === $arGroupsTmp[$i]["ACTIVE"] ? 'N' : 'Y');
 						$LAST_GROUP_CODE = $bs->Add($arGroupsTmp[$i], true, true, 'Y' === $IMAGE_RESIZE);
